@@ -1,0 +1,61 @@
+//1. 定义变量
+@color: #f40;
+.demo{
+  background-color: @color;/* 使用变量 */
+}
+
+//2. 混合
+.tocenter(@type) {
+  position: @type;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.demo{
+  .tocenter(absolute);/* 使用混合 */
+}
+
+//3. 嵌套
+.wrapper{
+  color: #000;
+  &.content{/* 并列元素写法 */
+    display: block;
+  }
+  >.header{/* 直接子元素写法 */
+    width: 50px;
+  }
+  .footer{/* 子元素写法 */
+    width: 60px;
+  }
+}
+
+//4. 运算
+@width: 500px;
+.demo{
+  width: @width * 2;/* 使用运算 */
+}
+
+//5. 函数
+/* 可在官方文档查阅并使用相关函数 */
+
+//6. 作用域(私有变量,外部无法使用)
+.a{
+  @top: 10px;/* 定义私有变量 */
+  top: @top;/* 使用私有变量 */
+}
+
+//7. 注释
+/* less中有两种注释，多行注释可以编译到css文件中 */
+
+//8. 导入
+@import "common.less";/* 可以省略后缀.less */
+@import "abc.css";
+
+
+/* 
+  BEM: 解决了类名冲突的问题
+  css in js: 解决类名冲突问题
+  css module
+
+  预编译器less: 解决样式"值"重复的问题(如: 居中代码, 颜色值)
+*/
