@@ -38,3 +38,8 @@
 
     babel-plugin-transform-remove-console // 移除源码中控制台输出语句
  */
+ 
+ /*
+  postcss使css代码兼容性更好(要依靠预设@babel/preset-env)
+  babel使写的js代码兼容性更好(要依靠预设@babel/preset-env)
+*/
