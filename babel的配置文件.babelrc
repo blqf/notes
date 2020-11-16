@@ -1,0 +1,40 @@
+{
+  "presets": [
+    "@babel/preset-env"
+  ], //预设
+  "plugins": [
+    "@babel/plugin-proposal-class-properties"
+  ] //插件
+}
+/* {
+      "presets": ["a", "b"],//预设
+      "plugins": ["c", "d"]//插件
+    }
+    执行顺序：c->d->b->a
+*/
+/* 插件：
+    @babel/plugin-proposal-class-properties // 可以让你在类中书写初始化字段
+    class A {
+      a = 1;
+      constructor() {
+        this.b = 3;
+      }
+    }
+
+    @babel/plugin-proposal-function-bind // 可以让你轻松为某个方法指定this
+    fn.call(obj); <=> obj::fn();
+
+
+    @babel/plugin-proposal-optional-chaining // 作用如下
+    const obj = {
+      foo: {
+        bar: {
+          baz: 42
+        }
+      }
+    }
+    const baz = obj?.foo?.bar?.baz // 42
+    const safe = obj?.qux?.baz // undefined(而不是报错)
+
+    babel-plugin-transform-remove-console // 移除源码中控制台输出语句
+ */
