@@ -1,0 +1,5 @@
+last 3 version
+> 1%
+not ie <= 8
+
+// 该文件描述了兼容的浏览器范围，可被babel与postcss解析时读取
