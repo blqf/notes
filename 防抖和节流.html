@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text">
+  <button type="button">click me</button>
+  <script>
+    // 防抖
+    const input = document.getElementsByTagName('input')[0];
+
+    function fangdou(dom) {
+      let timer;
+      dom.oninput = function (e) {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          console.log(this.value);
+        }, 1000)
+      }
+    }
+    fangdou(input);
+
+  </script>
+  <script>
+    // 节流
+    let num = 0;
+    const btn = document.getElementsByTagName('button')[0];
+
+    function jieliu(dom) {
+      let isRun = false;
+      dom.addEventListener('click', function () {
+        if (isRun) {
+          return;
+        }
+        isRun = true;
+        setTimeout(() => {
+          console.log(++num);
+          isRun = false;
+        }, 1000);
+      });
+    }
+
+    jieliu(btn);
+  </script>
+</body>
+
+</html>
