@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div></div>
+  <script>
+    /*
+      强缓存（强制缓存）：在缓存未过期的时间内，即使用户刷新页面，也无法向服务器请求资源，只能使用本地缓存。
+      协商缓存：发请求-->客户端看资源是否过期-->过期-->请求服务器-->服务器对比资源是否真的过期-->没过期-->返回304状态码-->客户端用缓存的老资源。
+                发请求-->客户端看资源是否过期-->过期-->请求服务器-->服务器对比资源是否真的过期-->过期-->返回200状态码-->客户端如第一次接收该资源一样，记下它的cache-control中的max-age、etag、last-modified等
+     */
+     /* 
+      https://juejin.im/post/5c417993f265da61285a6075
+      https://www.jianshu.com/p/9c95db596df5
+      */
+  </script>
+</body>
+</html>
