@@ -40,6 +40,6 @@
  */
  
  /*
-  postcss使css代码兼容性更好(要依靠预设@babel/preset-env)
-  babel使写的js代码兼容性更好(要依靠预设@babel/preset-env)
+  postcss通过插件来转换写的css代码，可以使css代码兼容性更好(预设postcss-preset-env集合了许多常用插件)
+  babel通过插件来转换写的js代码，可以使js代码兼容性更好(预设@babel/preset-env)
 */
