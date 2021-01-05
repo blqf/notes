@@ -26,6 +26,9 @@ module.exports = {
       },
       {
         test: /\.jpg$/,
+        exclude: /node_modules/,/* 不解析正则匹配到的模块，可以是文件或文件夹，可以不写这个配置 */
+        // 或
+        // include: /src/,/* 只解析正则匹配到的模块，可以是文件或文件夹，可以不写这个配置 */
         use: [
           {
             loader: 'file-loader',
@@ -35,7 +38,8 @@ module.exports = {
           }
         ]
       }
-    ]
+    ],
+    noParse: /jquery/ /* 不去解析正则匹配到的模块 */
   },
   plugins: [
     new HtmlWebapckPlugin({
@@ -54,15 +58,3 @@ module.exports = {
     new CleanWebpackPlugin()
   ]
 }
-
-/* 
-  html-webpack-plugin: 生成html文件
-
-  less-loader: 转换less代码为css代码
-  css-loader: 导出css字符串
-  style-loader: 将字符串嵌入html文件的style标签 | mini-css-extract-plugin: 生成css文件
-
-  file-loader: 生成文件,如图片
-  url-loader: 生成路径,如图片
-  copy-webpack-plugin: copy静态资源到dist目录，主要用于html文件直接引用图片的情况
-*/
