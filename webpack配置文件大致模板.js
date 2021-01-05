@@ -26,9 +26,6 @@ module.exports = {
       },
       {
         test: /\.jpg$/,
-        exclude: /node_modules/,/* 不解析正则匹配到的模块，可以是文件或文件夹，可以不写这个配置 */
-        // 或
-        // include: /src/,/* 只解析正则匹配到的模块，可以是文件或文件夹，可以不写这个配置 */
         use: [
           {
             loader: 'file-loader',
@@ -37,6 +34,13 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,/* 不解析正则匹配到的模块，可以是文件或文件夹，可以不写这个配置 */
+        // 或
+        // include: /src/,/* 只解析正则匹配到的模块，可以是文件或文件夹，可以不写这个配置 */
+        use: ['babel-loader']
       }
     ],
     noParse: /jquery/ /* 不去解析正则匹配到的模块，可以不写这个配置 */
