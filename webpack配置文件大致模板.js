@@ -39,7 +39,7 @@ module.exports = {
         ]
       }
     ],
-    noParse: /jquery/ /* 不去解析正则匹配到的模块 */
+    noParse: /jquery/ /* 不去解析正则匹配到的模块，可以不写这个配置 */
   },
   plugins: [
     new HtmlWebapckPlugin({
