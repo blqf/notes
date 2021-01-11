@@ -48,8 +48,8 @@
 2. git remote add origin <远程仓库GitHub地址> // 连接远程仓库
 3. git push [-u] origin <要push到远端的分支名，如main> // 将指定分支推送到远程对应分支上，-u指定当前主机为默认主机，后面就可以直接使用git push将当前分支推送到默认主机
 
-4. git push <远程主机名> <要推送的分支名> // 将某一分支推送到远程主机
-5. git push origin // 将当前分支推送到origin主机的对应分支
+1. git push <远程主机名> <要推送的分支名> // 将某一分支推送到远程主机
+2. git push origin // 将当前分支推送到origin主机的对应分支
 
 ## 操作远程分支
 ### 删除
