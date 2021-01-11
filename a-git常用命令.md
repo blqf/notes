@@ -1,10 +1,10 @@
 [toc]
 # 本地操作
 ## 本地提交
-git init // 初始化
-git status // 查看当前文件的状态
-git add . // 添加文件至暂存区
-git commit -m <'注释'> // 提交版本到本地仓库
+1. git init // 初始化
+2. git status // 查看当前文件的状态
+3. git add . // 添加文件至暂存区
+4. git commit -m <'注释'> // 提交版本到本地仓库
 
 ## 操作本地分支
 ### 增加
