@@ -63,10 +63,9 @@
 2. git fetch <远程主机名> // 将远程所有分支的更新抓取到本地
 3. git log -p FETCH_HEAD // 查看fetch过来分支的更新内容，以判断有无合并冲突
 4. git merge origin/<要同步的分支名> // 将抓取到的分支合并到本地对应分支
->fetch命令 + merge命令，这两个命令一起使用，才能完成本地与远程更新的同步
+>注：fetch命令 + merge命令，这两个命令一起使用，才能完成本地与远程更新的同步
 1. git pull origin <分支名> // 将远程仓库指定分支(一般为main)的更新直接同步到本地仓库对应分支(一般为main)上
->pull命令直接能完成本地与远程更新的同步
->pull命令 = fetch命令 + merge命令
+>注：1.pull命令直接能完成本地与远程更新的同步。2.pull命令 = fetch命令 + merge命令
 ### 拉取远程指定分支到本地
 1. git checkout -b 新建分支名dev1 origin/远程分支名dev1 // 创建新分支并与远程某一指定分支形成映射
 # 其他
