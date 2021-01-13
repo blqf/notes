@@ -6,7 +6,7 @@
   npm list [--depth=0] [-g]（查询安装的包）
   npm root [-g]（查询包的安装路径）
   npm outdated（检查有哪些包需要更新）
-  npm updated [包名] [-g]（更新包）
+  npm update [包名] [-g]（更新包）
   npm info 包名（查询包的信息）
   npm run 配置命令（运行package.json中配置的scripts字段）
   npx cli命令（运行本地安装的cli命令）
