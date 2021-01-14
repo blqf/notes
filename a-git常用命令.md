@@ -43,6 +43,11 @@
 
 
 # 远程操作
+## 远程克隆
+1. git clone 远程仓库地址 // 将远程仓库克隆到本地
+2. git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done // 获取所有远程分支并映射到本地
+>注：2必须在1的基础上才能完成
+
 ## 远程推送
 1. git branch -M main // 修改当前分支名为main
 2. git remote add origin <远程仓库GitHub地址> // 连接远程仓库
