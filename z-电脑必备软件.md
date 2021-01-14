@@ -1,0 +1,13 @@
+# 前端
+1. GoogleChrome浏览器，MicrosoftEdge浏览器
+3. vscode，微信开发者工具
+4. node(包含了npm)，nvm
+5. git
+# 后端
+1. mysql，navicat
+# 工具
+2. postman，ps2019
+# 其他
+1. 7-zip，office2016
+2. qq，微信，网易云音乐，百度网盘
+3. ev播放器
