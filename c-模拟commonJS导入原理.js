@@ -27,7 +27,8 @@ console.log(__dirname === module.path);
     6. 创建module对象
     module.exports = {};
     const exports = module.exports;
-    __temp.call(module.exports, module, exports, require, module.path, module.filename) // return module.exports;
+    __temp.call(module.exports, module, exports, require, module.path, module.filename);
+    return module.exports;
 }
 require.cache = {};
 
