@@ -14,16 +14,19 @@
     // 防抖
     const input = document.getElementsByTagName('input')[0];
 
-    function fangdou(dom) {
+    function debounce(func, stayTime = 2000) {
       let timer;
-      dom.oninput = function (e) {
-        clearTimeout(timer);
-        timer = setTimeout(() => {
-          console.log(this.value);
-        }, 1000)
+      return function (e) {
+         clearTimeout(timer);
+         timer = setTimeout(() => {
+           func(e);
+        }, stayTime);
       }
     }
-    fangdou(input);
+    
+    input.addEventListener('input', debounce(e => {
+      console.log(e.target.value);
+    }, 1000))
 
   </script>
   <script>
