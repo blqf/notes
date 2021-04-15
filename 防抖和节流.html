@@ -31,24 +31,24 @@
   </script>
   <script>
     // 节流
-    let num = 0;
-    const btn = document.getElementsByTagName('button')[0];
+    const btn = document.getElementsByClassName('btn')[0];
 
-    function jieliu(dom) {
-      let isRun = false;
-      dom.addEventListener('click', function () {
-        if (isRun) {
-          return;
-        }
-        isRun = true;
-        setTimeout(() => {
-          console.log(++num);
-          isRun = false;
-        }, 1000);
-      });
+    function throttle(func, stayTime = 2000) {
+      let flag = true;
+      let timer = null;
+      return function (e) {
+        if (!flag) return;
+        flag = false;
+        func(e);
+        timer = setTimeout(() => {
+            flag = true;
+        }, stayTime);
+      }
     }
 
-    jieliu(btn);
+    btn.addEventListener('click', throttle(e => {
+      console.log('a');
+    }, 1000));
   </script>
 </body>
 
