@@ -12,3 +12,27 @@ function uniqueArr(arr, newArr = []) {
 function deepClone(oldObj, newObj = {}) {
   return newObj = JSON.parse(JSON.stringify(oldObj));
 }
+
+// 防抖
+function debounce(func, duration = 1000) {
+  let timer;
+  return (...rest) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func(...rest);
+    }, duration);
+  };
+}
+
+// 节流
+function throttle(func, duration = 1000) {
+  let key = true;
+  return (...rest) => {
+    if (!key) return;
+    key = false;
+    func(...rest);
+    setTimeout(() => {
+      key = true;
+    }, duration);
+  };
+}
