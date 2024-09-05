@@ -68,8 +68,8 @@
 2. git branch -a // 查看本地及远程的所有分支
 ### 同步远程分支的更新
 1. git pull origin <分支名> // 将远程仓库指定分支合并至当前分支 
-2. git merge origin <分支名> // merge合并
-3. git rebase origin <分支名> // rebase合并
+2. git merge origin <分支名> // merge合并，merge时，当前更改为我的更改
+3. git rebase origin <分支名> // rebase合并，rebase时，传入更改为我的更改
 
 ### 拉取远程指定分支到本地
 1. git checkout -b 新建分支名dev1 origin/远程分支名dev1 // 创建新分支并与远程某一指定分支形成映射
