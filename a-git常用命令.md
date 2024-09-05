@@ -28,8 +28,9 @@
 1. git log [--oneline] // 查看仓库中已提交的版本
 2. git reflog // 查看日志记录
 ### 版本回退
-1. git reset --hard HEAD~1  // 回退到上一个版本，~2表示回退上两个版本
-2. git reset --hard <版本id> // 回退到指定版本，版本id可用git reflog查看
+1. git reset --hard HEAD~1  // 硬回退，直接删除回退内容，回退到上一个版本，~2表示回退上两个版本
+2. git reset --soft HEAD~1  // 软回退，将内容回退至暂存区，回退到上一个版本，~2表示回退上两个版本
+3. git reset --hard <版本id> // 回退到指定版本，版本id可用git reflog查看
 
 ## 撤销修改
 ### 撤销工作区修改
@@ -66,13 +67,10 @@
 1. git branch -r // 查看远程分支
 2. git branch -a // 查看本地及远程的所有分支
 ### 同步远程分支的更新
-1. git fetch <远程主机名> <远程分支名> // 将远程指定分支的更新抓取到本地
-2. git fetch <远程主机名> // 将远程所有分支的更新抓取到本地
-3. git log -p FETCH_HEAD // 查看fetch过来分支的更新内容，以判断有无合并冲突
-4. git merge origin/<要同步的分支名> // 将抓取到的分支合并到本地对应分支
->注：fetch命令 + merge命令，这两个命令一起使用，才能完成本地与远程更新的同步
-1. git pull origin <分支名> // 将远程仓库指定分支(一般为main)的更新直接同步到本地仓库对应分支(一般为main)上
->注：1.pull命令直接能完成本地与远程更新的同步。2.pull命令 = fetch命令 + merge命令
+1. git pull origin <分支名> // 将远程仓库指定分支合并至当前分支 
+2. git merge origin <分支名> // merge合并
+3. git rebase origin <分支名> // rebase合并
+
 ### 拉取远程指定分支到本地
 1. git checkout -b 新建分支名dev1 origin/远程分支名dev1 // 创建新分支并与远程某一指定分支形成映射
 # 其他
